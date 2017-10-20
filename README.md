@@ -1,1 +1,1 @@
-# kom_semestralka
+# BI-KOM semestralka
