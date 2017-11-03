@@ -84,7 +84,7 @@ Employee</panel_attributes>
     <panel_attributes>&lt;&lt;Kind&gt;&gt;
 Project
 --
--maxTime: long
+-maxTime: ulong
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -182,11 +182,12 @@ related to v</panel_attributes>
       <x>768</x>
       <y>424</y>
       <w>168</w>
-      <h>48</h>
+      <h>64</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Kind&gt;&gt;
 Time entry
 --
+-time: ulong
 -description: String</panel_attributes>
     <additional_attributes/>
   </element>
@@ -230,7 +231,7 @@ spent on ^</panel_attributes>
     <panel_attributes>&lt;&lt;Collective&gt;&gt;
 Company
 --
--licenceCount: int</panel_attributes>
+-licenceCount: uint</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -469,11 +470,11 @@ for v</panel_attributes>
     <coordinates>
       <x>552</x>
       <y>680</y>
-      <w>392</w>
+      <w>400</w>
       <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=1
+m1=M\n\n1
 m2=1..n
 {inseparable}</panel_attributes>
     <additional_attributes>470.0;10.0;470.0;250.0;10.0;250.0;10.0;170.0</additional_attributes>
@@ -483,11 +484,11 @@ m2=1..n
     <coordinates>
       <x>712</x>
       <y>680</y>
-      <w>208</w>
+      <w>216</w>
       <h>192</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=1
+m1=M\n\n1
 m2=0..n
 {inseparable}</panel_attributes>
     <additional_attributes>240.0;10.0;240.0;220.0;10.0;220.0;10.0;170.0</additional_attributes>
@@ -501,7 +502,7 @@ m2=0..n
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=1
+m1=1  M
 m2=1..n
 {essential, inseparable}</panel_attributes>
     <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
@@ -586,13 +587,69 @@ Closed</panel_attributes>
       <x>616</x>
       <y>336</y>
       <w>592</w>
-      <h>184</h>
+      <h>200</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..n
 m2=0..1
 &lt; owned by
 </panel_attributes>
-    <additional_attributes>700.0;10.0;700.0;200.0;10.0;200.0;10.0;150.0</additional_attributes>
+    <additional_attributes>700.0;10.0;700.0;220.0;10.0;220.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>304</y>
+      <w>168</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Mode&gt;&gt;
+Currency</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>216</y>
+      <w>112</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+&lt;&lt;characterization&gt;&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>968</x>
+      <y>392</y>
+      <w>168</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Quality&gt;&gt;
+Total time
+--
+-time: ulong
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>928</x>
+      <y>336</y>
+      <w>136</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..*
+m2=1
+&lt;&lt;characterization&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0;150.0;70.0</additional_attributes>
   </element>
 </diagram>
