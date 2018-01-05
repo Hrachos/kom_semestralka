@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>210</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=()-&gt;[]
+m1=rq
+m2=rq
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>60</y>
+      <w>40</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=()-&gt;[]
+m2=rq
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>70</x>
+      <y>180</y>
+      <w>521</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>A2
+Přidělovatel
+layer=-99</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=0;
+
+
+setLineThickness(2);
+setForegroundColor("gray");
+drawLineHorizontal(0);
+
+for(String textline : textlines) {
+	y += printLeft(textline,height/2+y);
+}
+
+drawLineHorizontal(height);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>70</x>
+      <y>50</y>
+      <w>521</w>
+      <h>131</h>
+    </coordinates>
+    <panel_attributes>CA1
+Zadavatel
+layer=-99</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=0;
+
+
+setLineThickness(2);
+setForegroundColor("gray");
+drawLineHorizontal(0);
+
+for(String textline : textlines) {
+	y += printLeft(textline,height/2+y);
+}
+
+drawLineHorizontal(height);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>70</x>
+      <y>350</y>
+      <w>521</w>
+      <h>101</h>
+    </coordinates>
+    <panel_attributes>CA1
+Zadavatel
+layer=-99</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=0;
+
+
+setLineThickness(2);
+setForegroundColor("gray");
+drawLineHorizontal(0);
+
+for(String textline : textlines) {
+	y += printLeft(textline,height/2+y);
+}
+
+drawLineHorizontal(height);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>150</x>
+      <y>110</y>
+      <w>421</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>T2
+Zpracování projektu
+bg=white
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y=textHeight();
+int lessHeight=height-textHeight()*2;
+
+drawRectangleRound(0,textHeight()*2,width,lessHeight,width/4,lessHeight);
+
+printCenter(textlines.get(0),height/2+textHeight());
+printCenter(textlines.get(1),textHeight());
+
+setForegroundColor("red");
+Polygon p = new Polygon();
+// right line
+drawLine(width/2+textHeight(),textHeight()*2,width/2+60,lessHeight/2+textHeight()*2);
+drawLine(width/2+60,lessHeight/2+textHeight()*2,width/2+textHeight(),lessHeight+textHeight()*2);
+// left line
+drawLine(width/2-textHeight(),textHeight()*2,width/2-60,lessHeight/2+textHeight()*2);
+drawLine(width/2-60,lessHeight/2+textHeight()*2,width/2-textHeight(),lessHeight+textHeight()*2);
+
+setForegroundColor("black");
+setBackgroundColor("gray");
+int smallRectangle = 16;
+drawRectangle(width/2+textHeight()-smallRectangle/2,lessHeight+textHeight()*2-smallRectangle,smallRectangle,smallRectangle);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>150</x>
+      <y>280</y>
+      <w>321</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>T1
+Popis projektu
+bg=white
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y=textHeight();
+int lessHeight=height-textHeight()*2;
+
+drawRectangleRound(0,textHeight()*2,width,lessHeight,width/4,lessHeight);
+
+printCenter(textlines.get(0),height/2+textHeight());
+printCenter(textlines.get(1),textHeight());
+
+setForegroundColor("red");
+Polygon p = new Polygon();
+// right line
+drawLine(width/2+textHeight(),textHeight()*2,width/2+60,lessHeight/2+textHeight()*2);
+drawLine(width/2+60,lessHeight/2+textHeight()*2,width/2+textHeight(),lessHeight+textHeight()*2);
+// left line
+drawLine(width/2-textHeight(),textHeight()*2,width/2-60,lessHeight/2+textHeight()*2);
+drawLine(width/2-60,lessHeight/2+textHeight()*2,width/2-textHeight(),lessHeight+textHeight()*2);
+
+setForegroundColor("black");
+setBackgroundColor("gray");
+int smallRectangle = 16;
+drawRectangle(width/2+textHeight()-smallRectangle/2,lessHeight+textHeight()*2-smallRectangle,smallRectangle,smallRectangle);</custom_code>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>210</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=[]&lt;.()
+m1=pm
+m2=ac
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>70</x>
+      <y>460</y>
+      <w>521</w>
+      <h>131</h>
+    </coordinates>
+    <panel_attributes>A2
+Přidělovatel
+layer=-99</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=0;
+
+
+setLineThickness(2);
+setForegroundColor("gray");
+drawLineHorizontal(0);
+
+for(String textline : textlines) {
+	y += printLeft(textline,height/2+y);
+}
+
+drawLineHorizontal(height);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>280</x>
+      <y>520</y>
+      <w>291</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>T3
+Vypracování tasku
+bg=white
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y=textHeight();
+int lessHeight=height-textHeight()*2;
+
+drawRectangleRound(0,textHeight()*2,width,lessHeight,width/4,lessHeight);
+
+printCenter(textlines.get(0),height/2+textHeight());
+printCenter(textlines.get(1),textHeight());
+
+setForegroundColor("red");
+Polygon p = new Polygon();
+// right line
+drawLine(width/2+textHeight(),textHeight()*2,width/2+60,lessHeight/2+textHeight()*2);
+drawLine(width/2+60,lessHeight/2+textHeight()*2,width/2+textHeight(),lessHeight+textHeight()*2);
+// left line
+drawLine(width/2-textHeight(),textHeight()*2,width/2-60,lessHeight/2+textHeight()*2);
+drawLine(width/2-60,lessHeight/2+textHeight()*2,width/2-textHeight(),lessHeight+textHeight()*2);
+
+setForegroundColor("black");
+setBackgroundColor("gray");
+int smallRectangle = 16;
+drawRectangle(width/2+textHeight()-smallRectangle/2,lessHeight+textHeight()*2-smallRectangle,smallRectangle,smallRectangle);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>70</x>
+      <y>590</y>
+      <w>521</w>
+      <h>101</h>
+    </coordinates>
+    <panel_attributes>A3
+Zpracovatel
+layer=-99</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=0;
+
+
+setLineThickness(2);
+setForegroundColor("gray");
+drawLineHorizontal(0);
+
+for(String textline : textlines) {
+	y += printLeft(textline,height/2+y);
+}
+
+drawLineHorizontal(height);</custom_code>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>210</y>
+      <w>50</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>lt=[]&lt;.()
+m1=rq
+m2=ac
+r2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;340.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>710</x>
+      <y>50</y>
+      <w>521</w>
+      <h>131</h>
+    </coordinates>
+    <panel_attributes>A2
+Přidělovatel
+layer=-99</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=0;
+
+
+setLineThickness(2);
+setForegroundColor("gray");
+drawLineHorizontal(0);
+
+for(String textline : textlines) {
+	y += printLeft(textline,height/2+y);
+}
+
+drawLineHorizontal(height);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>790</x>
+      <y>110</y>
+      <w>421</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>T5
+Proplacení faktury
+bg=white
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y=textHeight();
+int lessHeight=height-textHeight()*2;
+
+drawRectangleRound(0,textHeight()*2,width,lessHeight,width/4,lessHeight);
+
+printCenter(textlines.get(0),height/2+textHeight());
+printCenter(textlines.get(1),textHeight());
+
+setForegroundColor("red");
+Polygon p = new Polygon();
+// right line
+drawLine(width/2+textHeight(),textHeight()*2,width/2+60,lessHeight/2+textHeight()*2);
+drawLine(width/2+60,lessHeight/2+textHeight()*2,width/2+textHeight(),lessHeight+textHeight()*2);
+// left line
+drawLine(width/2-textHeight(),textHeight()*2,width/2-60,lessHeight/2+textHeight()*2);
+drawLine(width/2-60,lessHeight/2+textHeight()*2,width/2-textHeight(),lessHeight+textHeight()*2);
+
+setForegroundColor("black");
+setBackgroundColor("gray");
+int smallRectangle = 16;
+drawRectangle(width/2+textHeight()-smallRectangle/2,lessHeight+textHeight()*2-smallRectangle,smallRectangle,smallRectangle);</custom_code>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>60</y>
+      <w>40</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=()-&gt;[]
+m2=rq
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>710</x>
+      <y>180</y>
+      <w>521</w>
+      <h>131</h>
+    </coordinates>
+    <panel_attributes>CA1
+Zadavatel
+layer=-99</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=0;
+
+
+setLineThickness(2);
+setForegroundColor("gray");
+drawLineHorizontal(0);
+
+for(String textline : textlines) {
+	y += printLeft(textline,height/2+y);
+}
+
+drawLineHorizontal(height);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>710</x>
+      <y>450</y>
+      <w>521</w>
+      <h>131</h>
+    </coordinates>
+    <panel_attributes>A3
+Zpracovatel
+layer=-99</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=0;
+
+
+setLineThickness(2);
+setForegroundColor("gray");
+drawLineHorizontal(0);
+
+for(String textline : textlines) {
+	y += printLeft(textline,height/2+y);
+}
+
+drawLineHorizontal(height);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>710</x>
+      <y>320</y>
+      <w>521</w>
+      <h>131</h>
+    </coordinates>
+    <panel_attributes>A2
+Přidělovatel
+layer=-99</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y=0;
+
+
+setLineThickness(2);
+setForegroundColor("gray");
+drawLineHorizontal(0);
+
+for(String textline : textlines) {
+	y += printLeft(textline,height/2+y);
+}
+
+drawLineHorizontal(height);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>790</x>
+      <y>380</y>
+      <w>421</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>T4
+Vystavení faktury
+bg=white
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y=textHeight();
+int lessHeight=height-textHeight()*2;
+
+drawRectangleRound(0,textHeight()*2,width,lessHeight,width/4,lessHeight);
+
+printCenter(textlines.get(0),height/2+textHeight());
+printCenter(textlines.get(1),textHeight());
+
+setForegroundColor("red");
+Polygon p = new Polygon();
+// right line
+drawLine(width/2+textHeight(),textHeight()*2,width/2+60,lessHeight/2+textHeight()*2);
+drawLine(width/2+60,lessHeight/2+textHeight()*2,width/2+textHeight(),lessHeight+textHeight()*2);
+// left line
+drawLine(width/2-textHeight(),textHeight()*2,width/2-60,lessHeight/2+textHeight()*2);
+drawLine(width/2-60,lessHeight/2+textHeight()*2,width/2-textHeight(),lessHeight+textHeight()*2);
+
+setForegroundColor("black");
+setBackgroundColor("gray");
+int smallRectangle = 16;
+drawRectangle(width/2+textHeight()-smallRectangle/2,lessHeight+textHeight()*2-smallRectangle,smallRectangle,smallRectangle);</custom_code>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>210</y>
+      <w>50</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=()-&gt;[]
+m1=rq
+r1=0..*
+m2=rq
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>210</y>
+      <w>50</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=()-&gt;[]
+m1=ac
+m2=pm
+r2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
